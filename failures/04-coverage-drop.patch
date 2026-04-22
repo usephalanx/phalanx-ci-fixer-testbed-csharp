@@ -1,6 +1,6 @@
 --- a/Phalanx.Calc/MathOps.cs
 +++ b/Phalanx.Calc/MathOps.cs
-@@ -19,4 +19,23 @@ public static class MathOps
+@@ -19,4 +19,24 @@ public static class MathOps
          }
          return a / b;
      }
