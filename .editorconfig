@@ -1,0 +1,13 @@
+root = true
+
+[*.cs]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+charset = utf-8
+end_of_line = lf
+
+# Allman braces (opening brace on its own line) are the default .NET
+# convention; enforcing it here makes `dotnet format --verify-no-changes`
+# fail when 01-lint.patch introduces a K&R-style same-line opening brace.
+csharp_new_line_before_open_brace = all

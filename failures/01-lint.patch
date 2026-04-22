@@ -1,0 +1,12 @@
+--- a/Phalanx.Calc/MathOps.cs
++++ b/Phalanx.Calc/MathOps.cs
+@@ -19,4 +19,9 @@ public static class MathOps
+         }
+         return a / b;
+     }
++
++    public static string VerboseDescription() {
++        return "This is a deliberately very long descriptive string whose K&R-style "
++            + "opening brace will trip `dotnet format` in the testbed.";
++    }
+ }
