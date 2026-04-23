@@ -6,9 +6,9 @@
      }
 +
 +    [Fact(Timeout = 2000)]
-+    public void MultiplyWithJitter()
++    public async Task MultiplyWithJitter()
 +    {
-+        Thread.Sleep(Random.Shared.Next(3000));
++        await Task.Delay(Random.Shared.Next(3000));
 +        Assert.Equal(6.0, MathOps.Multiply(2, 3));
 +    }
  }
