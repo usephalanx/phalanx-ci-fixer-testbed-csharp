@@ -20,7 +20,8 @@ public static class MathOps
         return a / b;
     }
 
-    public static string VerboseDescription() {
+    public static string VerboseDescription()
+    {
         return "This is a deliberately very long descriptive string whose K&R-style "
             + "opening brace will trip `dotnet format` in the testbed.";
     }
