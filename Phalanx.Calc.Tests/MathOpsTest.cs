@@ -69,4 +69,28 @@ public class MathOpsTest
     {
         Assert.Throws<DivideByZeroException>(() => MathOps.Divide(1, 0));
     }
+
+    [Fact]
+    public void PercentageBasic()
+    {
+        Assert.Equal(12.5, MathOps.Percentage(25, 200));
+    }
+
+    [Fact]
+    public void PercentageWholeZeroThrows()
+    {
+        Assert.Throws<DivideByZeroException>(() => MathOps.Percentage(10, 0));
+    }
+
+    [Fact]
+    public void AverageNonEmpty()
+    {
+        Assert.Equal(4.0, MathOps.Average(new double[] { 2, 4, 6 }));
+    }
+
+    [Fact]
+    public void AverageEmptyThrows()
+    {
+        Assert.Throws<ArgumentException>(() => MathOps.Average(new double[] { }));
+    }
 }
