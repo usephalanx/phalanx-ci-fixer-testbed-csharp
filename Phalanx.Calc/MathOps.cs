@@ -9,8 +9,7 @@ public static class MathOps
 
     public static double Subtract(double a, double b) => a - b;
 
-    // BUG (intentional testbed failure): Multiply is using Add's operator.
-    public static double Multiply(double a, double b) => a + b;
+    public static double Multiply(double a, double b) => a * b;
 
     public static double Divide(double a, double b)
     {
