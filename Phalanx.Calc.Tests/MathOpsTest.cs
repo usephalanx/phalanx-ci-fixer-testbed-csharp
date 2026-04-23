@@ -69,4 +69,11 @@ public class MathOpsTest
     {
         Assert.Throws<DivideByZeroException>(() => MathOps.Divide(1, 0));
     }
+
+    [Fact(Timeout = 2000)]
+    public async Task MultiplyWithJitter()
+    {
+        await Task.Delay(Random.Shared.Next(3000));
+        Assert.Equal(6.0, MathOps.Multiply(2, 3));
+    }
 }
