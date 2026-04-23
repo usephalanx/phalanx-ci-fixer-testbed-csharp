@@ -19,4 +19,24 @@ public static class MathOps
         }
         return a / b;
     }
+
+    public static double Percentage(double part, double whole)
+    {
+        if (whole == 0)
+        {
+            throw new DivideByZeroException("cannot compute percentage of zero");
+        }
+        return (part / whole) * 100;
+    }
+
+    public static double Average(double[] values)
+    {
+        if (values.Length == 0)
+        {
+            throw new ArgumentException("cannot average an empty list");
+        }
+        double sum = 0;
+        foreach (double v in values) { sum += v; }
+        return sum / values.Length;
+    }
 }
