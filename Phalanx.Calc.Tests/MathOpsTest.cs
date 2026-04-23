@@ -73,7 +73,7 @@ public class MathOpsTest
     [Fact(Timeout = 2000)]
     public async Task MultiplyWithJitter()
     {
-        await Task.Delay(Random.Shared.Next(3000));
+        await Task.Delay(100);
         Assert.Equal(6.0, MathOps.Multiply(2, 3));
     }
 }
